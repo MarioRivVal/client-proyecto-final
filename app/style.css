@@ -1,0 +1,201 @@
+/* ---------- 1. Variables ---------- */
+
+:root {
+  --color-primary: #c6f432;
+  --color-primary-hover: #b2e01e;
+  --color-dark: #0f1a2b;
+  --color-background: #f4f6f8;
+  --color-surface: #ffffff;
+  --color-text: #0f1a2b;
+  --color-muted: #5b6675;
+  --color-border: #dde2e8;
+  --color-error: #c62828;
+  --color-error-background: #fdecea;
+  --color-success: #2e7d32;
+  --color-success-background: #e8f5e9;
+  --color-warning: #8a5a00;
+  --color-warning-background: #fff4d6;
+
+  --space-xs: 4px;
+  --space-s: 8px;
+  --space-m: 16px;
+  --space-l: 24px;
+  --space-xl: 40px;
+
+  --font-title: var(--font-archivo-black), Impact, sans-serif;
+  --font-text: var(--font-inter), Arial, sans-serif;
+
+  --text-s: 14px;
+  --text-m: 16px;
+  --text-l: 20px;
+  --text-xl: 28px;
+  --text-xxl: 40px;
+
+  --radius: 12px;
+  --shadow: 0 2px 8px rgba(15, 26, 43, 0.08);
+  --max-width: 1080px;
+}
+
+/* ---------- 2. Base ---------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-text);
+  font-size: var(--text-m);
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 var(--space-m);
+  font-family: var(--font-title);
+  font-weight: 400;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: var(--text-xl);
+}
+
+h2 {
+  font-size: var(--text-l);
+}
+
+h3 {
+  font-size: var(--text-m);
+}
+
+p {
+  margin: 0 0 var(--space-m);
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ---------- 3. Clases compartidas ---------- */
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-l) var(--space-m);
+}
+
+.button {
+  display: inline-block;
+  padding: var(--space-s) var(--space-l);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius);
+  font-family: var(--font-text);
+  font-size: var(--text-m);
+  font-weight: 700;
+  color: var(--color-dark);
+  text-decoration: none;
+  background-color: var(--color-primary);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.button:hover,
+.button:focus-visible {
+  background-color: var(--color-primary-hover);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button-secondary {
+  border-color: var(--color-dark);
+  background-color: transparent;
+}
+
+.button-secondary:hover,
+.button-secondary:focus-visible {
+  background-color: var(--color-border);
+}
+
+.card {
+  padding: var(--space-l);
+  border-radius: var(--radius);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-m);
+}
+
+.field label {
+  font-size: var(--text-s);
+  font-weight: 500;
+}
+
+.field input,
+.field textarea {
+  padding: var(--space-s) var(--space-m);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font-family: var(--font-text);
+  font-size: var(--text-m);
+}
+
+.message-error,
+.message-success {
+  padding: var(--space-s) var(--space-m);
+  border-radius: var(--radius);
+  font-size: var(--text-s);
+}
+
+.message-error {
+  color: var(--color-error);
+  background-color: var(--color-error-background);
+}
+
+.message-success {
+  color: var(--color-success);
+  background-color: var(--color-success-background);
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: var(--text-xxl);
+  }
+
+  .container {
+    padding: var(--space-xl) var(--space-l);
+  }
+}
+
+/* ---------- 4. Impresión (/admin/imprimir) ---------- */
+
+@media print {
+  body {
+    background-color: var(--color-surface);
+  }
+
+  header,
+  .no-print {
+    display: none;
+  }
+}

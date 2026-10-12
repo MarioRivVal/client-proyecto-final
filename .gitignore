@@ -1,0 +1,16 @@
+/node_modules
+/.next/
+/out/
+/build
+/coverage
+
+.env*
+!.env.example
+
+*.tsbuildinfo
+next-env.d.ts
+*.log
+*.pem
+.DS_Store
+
+CLAUDE.md

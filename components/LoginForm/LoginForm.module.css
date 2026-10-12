@@ -1,0 +1,16 @@
+.form {
+  max-width: 400px;
+  margin: var(--space-xl) auto;
+}
+
+.submit {
+  width: 100%;
+  margin-bottom: var(--space-m);
+}
+
+.help {
+  margin: 0;
+  font-size: var(--text-s);
+  color: var(--color-muted);
+  text-align: center;
+}
