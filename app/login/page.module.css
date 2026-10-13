@@ -1,0 +1,25 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-l);
+  align-items: center;
+}
+
+/* Decorativa: fondo de CSS, sin alt. En el móvil, franja encima del formulario */
+.photo {
+  min-height: 200px;
+  border-radius: var(--radius);
+  background-image: url("/images/login.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .photo {
+    min-height: 480px;
+  }
+}

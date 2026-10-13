@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
 import LoginForm from "@/components/LoginForm/LoginForm";
 import { getSessionUser } from "@/lib/api-server";
+import styles from "./page.module.css";
 
 export default async function LoginPage({
   searchParams,
@@ -14,5 +15,10 @@ export default async function LoginPage({
   const { next } = await searchParams;
   const safeNext = next?.startsWith("/") && !next.startsWith("//") ? next : undefined;
 
-  return <LoginForm next={safeNext} />;
+  return (
+    <div className={styles.layout}>
+      <div className={styles.photo} />
+      <LoginForm next={safeNext} />
+    </div>
+  );
 }

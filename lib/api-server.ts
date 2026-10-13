@@ -1,7 +1,7 @@
 import { cookies } from "next/headers";
 import { SessionUser } from "./types";
 
-const API_URL = process.env.API_INTERNAL_URL ?? "http://localhost:3200";
+export const API_URL =process.env.API_INTERNAL_URL ?? "http://localhost:3200";
 
 // Llamadas a la API desde el servidor de Next, reenviando la cookie de sesión del usuario.
 // Devuelve null si no hay sesión, no tiene permiso o no existe.

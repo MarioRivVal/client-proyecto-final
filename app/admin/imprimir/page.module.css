@@ -1,0 +1,45 @@
+.actions {
+  display: flex;
+  gap: var(--space-s);
+  margin-bottom: var(--space-l);
+}
+
+.slot {
+  margin-bottom: var(--space-l);
+  padding: var(--space-m);
+  border-radius: var(--radius);
+  background-color: var(--color-surface);
+  /* Que un turno no quede partido entre dos hojas */
+  break-inside: avoid;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-s);
+}
+
+.table th,
+.table td {
+  padding: var(--space-s);
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.table th {
+  font-weight: 500;
+  color: var(--color-muted);
+}
+
+/* Hueco vacío para marcar a mano */
+.check {
+  width: 90px;
+  border-left: 1px solid var(--color-border);
+}
+
+@media print {
+  .slot {
+    padding: 0;
+  }
+}

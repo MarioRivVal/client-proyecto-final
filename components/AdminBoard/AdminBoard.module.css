@@ -1,0 +1,160 @@
+.summary {
+  font-weight: 700;
+}
+
+.notice {
+  padding: var(--space-s) var(--space-m);
+  border-radius: var(--radius);
+  font-size: var(--text-s);
+  color: var(--color-warning);
+  background-color: var(--color-warning-background);
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-s);
+  margin-bottom: var(--space-m);
+}
+
+.tab {
+  padding: var(--space-s) var(--space-m);
+  border: 2px solid var(--color-dark);
+  border-radius: var(--radius);
+  font-family: var(--font-text);
+  font-size: var(--text-s);
+  font-weight: 700;
+  color: var(--color-dark);
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.tab:hover,
+.tab:focus-visible {
+  background-color: var(--color-border);
+}
+
+.active,
+.active:hover {
+  color: var(--color-surface);
+  background-color: var(--color-dark);
+}
+
+.search {
+  max-width: 400px;
+}
+
+.empty {
+  color: var(--color-muted);
+}
+
+.slots {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-s);
+  margin-bottom: var(--space-s);
+}
+
+.time {
+  margin: 0;
+  font-size: var(--text-l);
+}
+
+.occupancy,
+.full {
+  margin: 0;
+  font-weight: 700;
+}
+
+.full {
+  color: var(--color-error);
+}
+
+/* ---------- Fichas desplegables de cada atleta ---------- */
+
+.registrations {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.registration {
+  border-top: 1px solid var(--color-border);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-m);
+  padding: var(--space-s) 0;
+  list-style: none;
+  cursor: pointer;
+}
+
+/* Quita el triángulo que Safari pone por defecto; la flecha propia es .arrow */
+.title::-webkit-details-marker {
+  display: none;
+}
+
+.who {
+  flex: 1;
+  min-width: 0;
+}
+
+.contact {
+  display: block;
+  font-size: var(--text-s);
+  color: var(--color-muted);
+  overflow-wrap: anywhere;
+}
+
+.arrow {
+  font-size: var(--text-l);
+  color: var(--color-muted);
+}
+
+.details[open] .arrow {
+  transform: rotate(180deg);
+}
+
+.data {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-xs) var(--space-m);
+  margin: 0 0 var(--space-m);
+  font-size: var(--text-s);
+}
+
+.data dt {
+  color: var(--color-muted);
+}
+
+.data dd {
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-s);
+  margin-bottom: var(--space-m);
+}
+
+.fullNote {
+  margin: 0;
+  font-size: var(--text-s);
+  color: var(--color-error);
+}

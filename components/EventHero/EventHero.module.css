@@ -1,0 +1,44 @@
+/* Foto de fondo con una capa oscura encima para que el texto se lea */
+.hero {
+  margin-bottom: var(--space-xl);
+  padding: var(--space-xl) var(--space-l);
+  border-radius: var(--radius);
+  color: var(--color-surface);
+  background-color: var(--color-dark);
+  background-image:
+    linear-gradient(var(--color-overlay), var(--color-overlay)), url("/images/hero.jpg");
+  /* Anclada arriba: si el banner recorta la foto, que sea por las piernas y no por la cara */
+  background-position: right top;
+  background-size: cover;
+}
+
+.kicker {
+  margin-bottom: var(--space-s);
+  font-size: var(--text-s);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.date {
+  margin-bottom: var(--space-xs);
+  font-size: var(--text-l);
+  font-weight: 700;
+}
+
+.venue {
+  margin: 0;
+  color: var(--color-border);
+}
+
+/* En pantalla grande la atleta queda a la derecha y el texto, sobre la parte oscura */
+@media (min-width: 768px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 380px;
+    background-image:
+      linear-gradient(90deg, var(--color-dark) 35%, transparent 75%), url("/images/hero.jpg");
+  }
+}

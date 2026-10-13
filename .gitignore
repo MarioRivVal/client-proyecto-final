@@ -12,5 +12,3 @@ next-env.d.ts
 *.log
 *.pem
 .DS_Store
-
-CLAUDE.md
