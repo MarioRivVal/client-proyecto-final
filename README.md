@@ -3,8 +3,8 @@
 Web de inscripciones a **FORTENOW**, un clasificatorio de CrossFit (ficticio). Los atletas
 solicitan plaza en un turno y el organizador acepta o rechaza cada solicitud desde un panel.
 
-- **Backend:** [fortenow-api](https://github.com/MarioRivVal/fortenow-api)
-- **Web desplegada:** _pendiente_
+- **Backend:** [api-proyecto-final](https://github.com/MarioRivVal/api-proyecto-final)
+- **Web desplegada:** <https://fortenow.netneo.es>
 
 ## Para quién es
 
